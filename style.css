@@ -1,0 +1,38 @@
+ .container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+  .heading {
+    text-align: center;
+    margin: 2rem;
+    padding-top: 3%;
+    color: blue;
+  }
+  li {
+    margin-bottom: 1%;
+    color: darkred;
+    font-size: larger;
+    
+  }
+  ul li {
+    position: relative; /* Required for absolute positioning of tooltip */
+  }
+  
+  ul li::after {
+    content: "Click on item to remove from list"; /* Text to be displayed on hover */
+    display: none; /* Hide the text by default */
+    position: absolute; /* Position the tooltip absolutely */
+    top: 1rem; /* Adjust the top position as needed */
+    left: 0; /* Adjust the left position as needed */
+    padding: 5px; /* Add padding to the tooltip */
+    background-color: #000; /* Background color of the tooltip */
+    color: #fff; /* Text color of the tooltip */
+  }
+  
+  ul li:hover::after {
+    display: block; /* Show the tooltip on hover */
+  }
+  #todoInput {
+    font-size: large;
+    font-style: italic;
+    font-weight: 600;
+  }
