@@ -5,17 +5,18 @@ const addButton = document.getElementById('addButton');
 
 // Initializing list
 
-function initializeList() {
-  const list = JSON.parse(localStorage.getItem('list'));
-  if (!list) {
-    // If list is null or undefined, initialize an empty array
-    const emptyList = [];
-    localStorage.setItem('list', JSON.stringify(emptyList));
-  }
-}
-initializeList();
+// function initializeList() {
+//   const list = JSON.parse(localStorage.getItem('list'));
+//   if (!list) {
+//     // If list is null or undefined, initialize an empty array
+//     const emptyList = [];
+//     localStorage.setItem('list', JSON.stringify(emptyList));
+//   }
+// }
+// initializeList();
 
-const list = []
+
+const list = JSON.parse(localStorage.getItem('list') || "[]");
 
 // Add event listener for button click
 addButton.addEventListener('click', function() {
